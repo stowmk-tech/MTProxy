@@ -1,0 +1,29 @@
+# MTProxy 配置示例文件
+# 这个文件可以打包保存，不包含真实密钥
+
+# 代理监听端口
+PORT=443
+
+# 内部管理端口
+INTERNAL_PORT=8888
+
+# 代理 Secret，真实环境请替换成你自己的 32 位 secret
+SECRET=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+# Telegram 官方配置文件
+PROXY_SECRET_FILE=proxy-secret
+PROXY_CONFIG_FILE=proxy-multi.conf
+
+# 可选：赞助频道 TAG
+# 如果没有赞助频道，留空即可
+SPONSOR_TAG=
+
+# 示例启动命令：
+# /opt/MTProxy/objs/bin/mtproto-proxy \
+#   -u mtproxy \
+#   -p 8888 \
+#   -H 443 \
+#   -S xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \
+#   --aes-pwd proxy-secret \
+#   proxy-multi.conf \
+#   -M 1
